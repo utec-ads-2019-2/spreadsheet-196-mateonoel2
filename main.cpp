@@ -53,7 +53,7 @@ bool solve(string &form){
 }
 
 void formulaToNum(unt formul){
-    if(formul >= formulas.size() or formul< 0){
+    if(formul < formulas.size() and formul>0){
         if(solve(formulas[formul])) formulaToNum(formul+1);
         else formulaToNum(formul-1);
     }
